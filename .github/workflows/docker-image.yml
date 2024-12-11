@@ -32,5 +32,4 @@ jobs:
         with:
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/docker-proxy-server:latest
-            ${{ secrets.DOCKER_USERNAME }}/docker-proxy-server:${{ github.sha }} # Optional for versioning by commit hash
+            ${{ secrets.DOCKER_USERNAME }}/docker-proxy-server
