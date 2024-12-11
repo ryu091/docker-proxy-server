@@ -9,11 +9,11 @@ RUN apk update &&\
 
 RUN cd /tmp/dumbproxy/ && \
   sed -i 's|Basic realm="dumbproxy"|Basic realm="Please authenticate"|' /tmp/dumbproxy/auth/basic.go && \
-  go get && \
+  go mod tidy && \
   go build
 
 RUN cd /tmp/socks5 && \
-  go get && \
+  go mod tidy && \
   go build
 
 RUN mkdir -p /tmp/bin && \
